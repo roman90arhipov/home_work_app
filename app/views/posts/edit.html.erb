@@ -1,5 +1,5 @@
 <h1>Edit post</h1>
 
-<%= render 'form' %>
+<%= render partial:'posts/shared/form', locals: { post: @post } %>
 
 <button><%= link_to 'Back', posts_path %><button>

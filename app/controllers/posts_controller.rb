@@ -49,8 +49,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :body)
   end
 
-  def like_params
-    params.require(:like).permit(:value)
-  end
+  # def like_params
+  #   params.require(:like).permit(:value)
+  # end
 
 end

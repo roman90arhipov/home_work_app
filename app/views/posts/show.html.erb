@@ -9,7 +9,7 @@
 <p>
 
 <p>
-  Likes: <%= @likes.size %>
+  <button>Like: <% @likes.add %><button> <%= @likes.size %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> | 

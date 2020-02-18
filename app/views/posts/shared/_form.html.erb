@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-  <%= form_for @post do |form| %>
+  <%= form_for post do |form| %>
 
   <p>
     <%= form.label :title %><br>
@@ -23,6 +23,12 @@
     <%= form.label :body %><br>
     <%= form.text_area :body %>
   </p>
+
+  <p>
+    <%= form.label :is_hiden %><br>
+    <%= form.check_box :is_hidden %>
+  </p>
+
 
   <p>
     <%= form.submit %>

@@ -15,12 +15,6 @@
     <th colspan="3"></th>
   </tr>
 
-  <%# <% if @post(:is_hidden) = true do 
-      @post.hide
-    unless
-      @post.show
-    end %>
-
   <% @posts.each do |p| %>
     <tr>
       <td><%= p.title %></td>

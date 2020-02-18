@@ -1,9 +1,7 @@
 class PostsController < ApplicationController
 
-  attr :title, :body, :is_hidden
-
   def index
-    @posts = Post.all
+    @posts = Post.where(is_hidden: false)
   end
 
   def show

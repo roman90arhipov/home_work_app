@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  attr :title, :body, :is_hidden
+
   def index
     @posts = Post.all
   end

@@ -15,13 +15,19 @@
     <th colspan="3"></th>
   </tr>
 
+  <%# <% if @post(:is_hidden) = true do 
+      @post.hide
+    unless
+      @post.show
+    end %>
+
   <% @posts.each do |p| %>
     <tr>
       <td><%= p.title %></td>
       <td><%= p.body %></td>
-      <td><%= link_to 'Show', post_path(p) %></td>
-      <td><%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <td><%= link_to 'Edit', edit_post_path(p) %></td>
+      <td><button><%= link_to 'Show', post_path(p) %><button></td>
+      <td><button><%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %><button></td>
+      <td><button><%= link_to 'Edit', edit_post_path(p) %><button></td>
     </tr>
   <% end %>
 </table>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_150415) do
+ActiveRecord::Schema.define(version: 2020_02_17_163815) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "post_id", null: false
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_02_03_150415) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
     t.string "body"
+    t.boolean "is_hidden"
   end
 
   add_foreign_key "likes", "posts"

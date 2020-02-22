@@ -9,8 +9,14 @@
 <p>
 
 <p>
-  Like: <%= @likes.size %>
+  Likes: <%= @likes.count %>
 </p>
+
+<%= link_to 'Like this post', post_add_like_path(@post.id), method: :post %> | 
+
+<%# <p>
+  Whrite comment: <%= @comment.body %>
+  
 
 <%= link_to 'Edit', edit_post_path(@post) %> | 
 <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %> | 

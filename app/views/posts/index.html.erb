@@ -2,9 +2,7 @@
 
 <h3 align="center">Listing Posts:</h3>
 
-<p>
-<%= link_to 'Add new post', new_post_path %>
-</p>
+<button><%= link_to 'Add new post', new_post_path %></button>
 
 <table>
   <tr>
@@ -19,9 +17,9 @@
     <tr>
       <td><%= p.title %></td>
       <td><%= p.body %></td>
-      <td><button><%= link_to 'Show', post_path(p) %><button></td>
-      <td><button><%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %><button></td>
-      <td><button><%= link_to 'Edit', edit_post_path(p) %><button></td>
+      <td><button><%= link_to 'Show', post_path(p) %></button></td>
+      <td><button><%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      <td><button><%= link_to 'Edit', edit_post_path(p) %></button></td>
     </tr>
   <% end %>
 </table>

@@ -1,8 +1,5 @@
 class Like < ApplicationRecord
+  include ActsAsVisibleFounder
+
   belongs_to :post
-
-  def add
-    @likes.size + 1
-  end
-
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_22_161203) do
+ActiveRecord::Schema.define(version: 2020_02_22_193737) do
 
   create_table "comments", force: :cascade do |t|
     t.string "body"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_02_22_161203) do
     t.string "title"
     t.string "body"
     t.boolean "is_hidden", default: false, null: false
+    t.integer "likes_count", default: 0
   end
 
   add_foreign_key "likes", "posts"

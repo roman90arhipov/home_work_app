@@ -43,6 +43,13 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def add_like
+    Like.create(post_id: params[:post_id])
+    post = Post.where(id: params[:post_id]).first
+    post.update(likes_count: post.likes_count + 1)
+    redirect_to post_path(post)
+  end
+
   private
 
   def post_params

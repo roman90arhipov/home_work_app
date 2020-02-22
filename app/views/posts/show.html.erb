@@ -9,8 +9,10 @@
 <p>
 
 <p>
-  Likes: <%= @likes.size %>
+  Likes: <%= @likes.count %>
 </p>
+
+<%= link_to 'Like this post', post_add_like_path(@post.id), method: :post %> | 
 
 <%# <p>
   Whrite comment: <%= @comment.body %>

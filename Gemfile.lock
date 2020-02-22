@@ -74,6 +74,8 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.6)
+    data_migrate (6.2.0)
+      rails (>= 5.0)
     erubi (1.9.0)
     ffi (1.12.1-x64-mingw32)
     globalid (0.4.2)
@@ -195,6 +197,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   capybara (>= 2.15)
+  data_migrate
   jbuilder (~> 2.7)
   pry
   puma (~> 4.1)

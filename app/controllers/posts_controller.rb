@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.where(is_hidden: false)
+    @posts = Post.visible
   end
 
   def show
